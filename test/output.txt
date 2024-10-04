@@ -1,0 +1,1012 @@
+  "ChannelBand": "Fatshark",
+  "ChannelNumber": 4,
+  "Frequency": 5800,
+  "ChannelColorR": 255,
+  "ChannelColorG": 255,
+  "ChannelColorB": 0,
+  "Time": 22.1493084,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Kestrel",
+  "Position": 2,
+  "DateTime": "2024/10/01 13:45:16"
+}
+PilotName: Kestrel
+LapNumber: 2
+Position: 2
+Setting LEDs to RGB values -> R: 255, G: 255, B: 0
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 2,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 2,
+  "Frequency": 5695,
+  "ChannelColorR": 0,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 22.5170685,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Nil",
+  "Position": 3,
+  "DateTime": "2024/10/01 13:45:17"
+}
+PilotName: Nil
+LapNumber: 2
+Position: 3
+Setting LEDs to RGB values -> R: 0, G: 0, B: 255
+{
+  "Round": 1,
+  "Race": 2,
+  "Type": "TimeTrial",
+  "State": "End",
+  "DateTime": "2024/10/01 13:45:34"
+}
+PilotName LapNumber or position is missing.
+State: End -> Setting LEDs to Red
+{
+  "Round": 2,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:45:57"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 2,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:45:57"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 2,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:45:57"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 2,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:45:57"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:07"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:07"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:08"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:08"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:08"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:08"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:26"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:26"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:26"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "Pilots": [
+    {
+      "Name": "FPVCris",
+      "Phonetic": "FPVCris",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 0,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 1,
+      "Frequency": 5658
+    },
+    {
+      "Name": "Joshnado",
+      "Phonetic": "Josh naydo",
+      "ChannelColorR": 0,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 2,
+      "Frequency": 5695
+    },
+    {
+      "Name": "Kestrel",
+      "Phonetic": "Kestrel",
+      "ChannelColorR": 255,
+      "ChannelColorG": 255,
+      "ChannelColorB": 0,
+      "ChannelBand": "Fatshark",
+      "ChannelNumber": 4,
+      "Frequency": 5800
+    },
+    {
+      "Name": "Nil",
+      "Phonetic": "Nil",
+      "ChannelColorR": 255,
+      "ChannelColorG": 0,
+      "ChannelColorB": 255,
+      "ChannelBand": "Raceband",
+      "ChannelNumber": 7,
+      "Frequency": 5880
+    }
+  ],
+  "DateTime": "2024/10/01 13:47:26"
+}
+PilotName LapNumber or position is missing.
+No valid color information found in JSON
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "State": "Arm",
+  "DateTime": "2024/10/01 13:48:07"
+}
+PilotName LapNumber or position is missing.
+State: Arm -> Setting LEDs to Orange
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "State": "Start",
+  "DateTime": "2024/10/01 13:48:15"
+}
+PilotName LapNumber or position is missing.
+State: Start -> Setting LEDs to Green
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 0,
+  "ChannelBand": "Fatshark",
+  "ChannelNumber": 4,
+  "Frequency": 5800,
+  "ChannelColorR": 255,
+  "ChannelColorG": 255,
+  "ChannelColorB": 0,
+  "Time": 6.8967706,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Kestrel",
+  "Position": 1,
+  "DateTime": "2024/10/01 13:48:22"
+}
+PilotName: Kestrel
+LapNumber: 0
+Position: 1
+Setting LEDs to RGB values -> R: 255, G: 255, B: 0
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 0,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 2,
+  "Frequency": 5695,
+  "ChannelColorR": 0,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 8.3375753,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Joshnado",
+  "Position": 3,
+  "DateTime": "2024/10/01 13:48:23"
+}
+PilotName: Joshnado
+LapNumber: 0
+Position: 3
+Setting LEDs to RGB values -> R: 0, G: 0, B: 255
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 0,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 1,
+  "Frequency": 5658,
+  "ChannelColorR": 255,
+  "ChannelColorG": 0,
+  "ChannelColorB": 0,
+  "Time": 8.4909793,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "FPVCris",
+  "Position": 4,
+  "DateTime": "2024/10/01 13:48:23"
+}
+PilotName: FPVCris
+LapNumber: 0
+Position: 4
+Setting LEDs to RGB values -> R: 255, G: 0, B: 0
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 0,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 7,
+  "Frequency": 5880,
+  "ChannelColorR": 255,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 8.3375734,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Nil",
+  "Position": 2,
+  "DateTime": "2024/10/01 13:48:24"
+}
+PilotName: Nil
+LapNumber: 0
+Position: 2
+Setting LEDs to RGB values -> R: 255, G: 0, B: 255
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 1,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 2,
+  "Frequency": 5695,
+  "ChannelColorR": 0,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 14.5228493,
+  "IsLapEnd": true,
+  "IsRaceEnd": true,
+  "PilotName": "Joshnado",
+  "Position": 1,
+  "DateTime": "2024/10/01 13:48:29"
+}
+PilotName: Joshnado
+LapNumber: 1
+Position: 1
+Setting LEDs to RGB values -> R: 0, G: 0, B: 255
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 1,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 1,
+  "Frequency": 5658,
+  "ChannelColorR": 255,
+  "ChannelColorG": 0,
+  "ChannelColorB": 0,
+  "Time": 16.2109584,
+  "IsLapEnd": true,
+  "IsRaceEnd": true,
+  "PilotName": "FPVCris",
+  "Position": 2,
+  "DateTime": "2024/10/01 13:48:31"
+}
+PilotName: FPVCris
+LapNumber: 1
+Position: 2
+Setting LEDs to RGB values -> R: 255, G: 0, B: 0
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 1,
+  "ChannelBand": "Fatshark",
+  "ChannelNumber": 4,
+  "Frequency": 5800,
+  "ChannelColorR": 255,
+  "ChannelColorG": 255,
+  "ChannelColorB": 0,
+  "Time": 16.7792053,
+  "IsLapEnd": true,
+  "IsRaceEnd": true,
+  "PilotName": "Kestrel",
+  "Position": 3,
+  "DateTime": "2024/10/01 13:48:31"
+}
+PilotName: Kestrel
+LapNumber: 1
+Position: 3
+Setting LEDs to RGB values -> R: 255, G: 255, B: 0
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 1,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 7,
+  "Frequency": 5880,
+  "ChannelColorR": 255,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 18.4063153,
+  "IsLapEnd": true,
+  "IsRaceEnd": true,
+  "PilotName": "Nil",
+  "Position": 4,
+  "DateTime": "2024/10/01 13:48:33"
+}
+PilotName: Nil
+LapNumber: 1
+Position: 4
+Setting LEDs to RGB values -> R: 255, G: 0, B: 255
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "State": "Times Up",
+  "DateTime": "2024/10/01 13:48:35"
+}
+PilotName LapNumber or position is missing.
+Unknown State -> No LED action
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 2,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 2,
+  "Frequency": 5695,
+  "ChannelColorR": 0,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 21.4787993,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Joshnado",
+  "Position": 1,
+  "DateTime": "2024/10/01 13:48:36"
+}
+PilotName: Joshnado
+LapNumber: 2
+Position: 1
+Setting LEDs to RGB values -> R: 0, G: 0, B: 255
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 2,
+  "ChannelBand": "Fatshark",
+  "ChannelNumber": 4,
+  "Frequency": 5800,
+  "ChannelColorR": 255,
+  "ChannelColorG": 255,
+  "ChannelColorB": 0,
+  "Time": 24.0873887,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Kestrel",
+  "Position": 2,
+  "DateTime": "2024/10/01 13:48:39"
+}
+PilotName: Kestrel
+LapNumber: 2
+Position: 2
+Setting LEDs to RGB values -> R: 255, G: 255, B: 0
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 2,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 7,
+  "Frequency": 5880,
+  "ChannelColorR": 255,
+  "ChannelColorG": 0,
+  "ChannelColorB": 255,
+  "Time": 26.540531,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "Nil",
+  "Position": 3,
+  "DateTime": "2024/10/01 13:48:41"
+}
+PilotName: Nil
+LapNumber: 2
+Position: 3
+Setting LEDs to RGB values -> R: 255, G: 0, B: 255
+{
+  "TimingSystemIndex": 0,
+  "LapNumber": 2,
+  "ChannelBand": "Raceband",
+  "ChannelNumber": 1,
+  "Frequency": 5658,
+  "ChannelColorR": 255,
+  "ChannelColorG": 0,
+  "ChannelColorB": 0,
+  "Time": 27.1547941,
+  "IsLapEnd": true,
+  "IsRaceEnd": false,
+  "PilotName": "FPVCris",
+  "Position": 4,
+  "DateTime": "2024/10/01 13:48:42"
+}
+PilotName: FPVCris
+LapNumber: 2
+Position: 4
+Setting LEDs to RGB values -> R: 255, G: 0, B: 0
+{
+  "Round": 3,
+  "Race": 1,
+  "Type": "Practise",
+  "State": "End",
+  "DateTime": "2024/10/01 13:48:53"
+}
+PilotName LapNumber or position is missing.
+State: End -> Setting LEDs to Red

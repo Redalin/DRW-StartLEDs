@@ -1,0 +1,95 @@
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a:link {
+    color: var(--foreground);
+    font-size: 1.5rem;
+}
+  
+a:hover  {
+    color: var(--foreground);
+}
+
+a:visited {
+    color: var(--foreground);
+}
+
+.header {
+    /* position: absolute; */
+    font-size: 2.5rem;
+    color: white;
+    /* border: 3px solid green; */
+    width: 100%;
+    padding: 10px;
+}
+
+.topnav {
+    display: flex;
+    overflow: visible;
+    background-color: #143642;
+    background-image: linear-gradient(yellow, purple);
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --bar-width: 40px;
+    --bar-height: 6px;
+    --hamburger-gap: 6px;
+    --foreground: purple;
+    --background: yellow;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+}
+
+.content {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    display: inline-block;
+    background-color: #F8F7F9;
+    box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    min-width: 250px;
+    /* min-height: 150px; */
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 2rem;
+    color: black;
+  }
+
+.card table {
+    /* border: 2px; */
+    width: 100%;
+}
+
+.pilotName {
+    margin-top: 5px;
+    padding: 10px;
+    width: 70%;
+    font-size: 24px;
+    box-sizing: border-box;
+    border: 4px solid black;
+    border-radius: 5px;
+}

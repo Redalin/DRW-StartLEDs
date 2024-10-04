@@ -1,8 +1,20 @@
-#ifndef WIFI_H
-#define WIFI_H
+// add this line including the hash: 
+// #include "config.h" 
+// config.h
+#ifndef CONFIG_H
+#define CONFIG_H
 
-// WiFi credentials
-const char* ssid = "ChrisnAimee.iot";
-const char* password = "carbondell";
+// The device hostname
+const char* hostname = "drwleds";
 
+#endif
+
+#define DEBUG 0
+
+#if DEBUG
+    #define debug(message) Serial.print(message)
+    #define debugln(message) Serial.println(message)
+#else
+    #define debug(message) 
+    #define debugln(message)
 #endif
