@@ -10,6 +10,7 @@
 #define NUM_LEDS 30
 #define BRIGHTNESS 200
 #define IDLE_TIMEOUT 30000  // 30 seconds idle time
+#define WAVE_DURATION 10000 // wage checkered flag 10 seconds
 
 CRGB leds[NUM_LEDS];
 
@@ -25,6 +26,33 @@ void setLEDs(CRGB color)
         leds[i] = color;
     }
     FastLED.show();
+}
+
+void waveChequeredFlag(CRGB color) {
+    int wavePosition = 0;
+
+    unsigned long startTime = millis(); // Get the starting time
+
+    while (millis() - startTime < WAVE_DURATION)
+    {
+        // Loop through the LEDs and set the chequered pattern with wave effect
+        for (int i = 0; i < NUM_LEDS; i++)
+        {
+            if ((i + wavePosition) % 2 == 0) {
+                leds[i] = color;
+            } else {
+                leds[i] = CRGB::Black;
+            }
+        }
+        FastLED.show();
+        delay(200);
+
+        // Increment wavePosition to shift the wave across the strip
+        wavePosition++;
+        if (wavePosition >= NUM_LEDS) {
+            wavePosition = 0;  // Reset wavePosition when it completes a full cycle
+        }
+    }
 }
 
 void handleMessage()
@@ -70,13 +98,13 @@ void handleMessage()
         // Handle different states and set LED colors accordingly
         if (strcmp(state, "Arm") == 0)
         {
-            Serial.println("State: Arm -> Setting LEDs to Orange");
-            setLEDs(CRGB(255, 165, 0)); // Orange color
+            Serial.println("State: Arm -> Setting LEDs to RED");
+            setLEDs(CRGB(255, 0, 0)); // RED color
         }
         else if (strcmp(state, "Start") == 0)
         {
-            Serial.println("State: Start -> Setting LEDs to Green");
-            setLEDs(CRGB(0, 255, 0)); // Green color
+            Serial.println("State: Start -> Setting LEDs to BLACK - turn them off");
+            setLEDs(CRGB(0, 0, 0)); // Black color
         }
         else if (strcmp(state, "Stop") == 0)
         {
@@ -85,13 +113,13 @@ void handleMessage()
         }
         else if (strcmp(state, "End") == 0)
         {
-            Serial.println("State: Stop -> Setting LEDs to Red");
+            Serial.println("State: End -> Setting LEDs to Red");
             setLEDs(CRGB(255, 0, 0)); // Red color
         }
         else if (strcmp(state, "Times Up") == 0)
         {
-            Serial.println("State: Stop -> Setting LEDs to Red");
-            setLEDs(CRGB(255, 0, 0)); // Red color
+            Serial.println("State: Times Up -> Waving the checkered flag");
+            waveChequeredFlag(CRGB::White); // Use White as the highlight color
         }
         else
         {
