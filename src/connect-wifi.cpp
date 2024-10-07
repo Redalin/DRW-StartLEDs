@@ -1,9 +1,9 @@
 // Include the Wifi Headers
 #include "connect-wifi.h"
 
-// Wifi network credentials
-const char* KNOWN_SSID[] = {"DRW", "ChrisnAimee.iot", "ChrisnAimee.com"};
-const char* KNOWN_PASSWORD[] = {"wellington", "carbondell", "carbondell"};
+// Array of known Wifi network credentials
+const char* KNOWN_SSID[] = {"DRW", "dummy.ssid", "dummySSID"};
+const char* KNOWN_PASSWORD[] = {"wellington", "dummypass", "dummySSIDpass"};
 const int   KNOWN_SSID_COUNT = sizeof(KNOWN_SSID) / sizeof(KNOWN_SSID[0]); // number of known networks
 
 // If we are hosting our own Wifi these are the credentials

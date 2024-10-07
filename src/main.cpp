@@ -1,60 +1,18 @@
-#include <FastLED.h>
 #include <WiFi.h>
 #include <ESPmDNS.h>
 #include "connect-wifi.h" // Wi-Fi credentials
+#include "ledControl.h"  // LED Control methods
 #include <WebServer.h>
 #include <ArduinoJson.h>
 #include "config.h" // Wi-Fi credentials
 
-#define LED_PIN 16
-#define NUM_LEDS 30
-#define BRIGHTNESS 200
 #define IDLE_TIMEOUT 30000  // 30 seconds idle time
-#define WAVE_DURATION 10000 // wage checkered flag 10 seconds
-
-CRGB leds[NUM_LEDS];
 
 WebServer server(80);
 
 unsigned long lastMessageTime = 0;
 
-// Set all LEDs to the specified color
-void setLEDs(CRGB color)
-{
-    for (int i = 0; i < NUM_LEDS; i++)
-    {
-        leds[i] = color;
-    }
-    FastLED.show();
-}
-
-void waveChequeredFlag(CRGB color) {
-    int wavePosition = 0;
-
-    unsigned long startTime = millis(); // Get the starting time
-
-    while (millis() - startTime < WAVE_DURATION)
-    {
-        // Loop through the LEDs and set the chequered pattern with wave effect
-        for (int i = 0; i < NUM_LEDS; i++)
-        {
-            if ((i + wavePosition) % 2 == 0) {
-                leds[i] = color;
-            } else {
-                leds[i] = CRGB::Black;
-            }
-        }
-        FastLED.show();
-        delay(200);
-
-        // Increment wavePosition to shift the wave across the strip
-        wavePosition++;
-        if (wavePosition >= NUM_LEDS) {
-            wavePosition = 0;  // Reset wavePosition when it completes a full cycle
-        }
-    }
-}
-
+// Handle the JSON message
 void handleMessage()
 {
     // Buffer to store the incoming JSON
@@ -162,8 +120,7 @@ void handleMessage()
 void setup()
 {
     Serial.begin(115200);
-    FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
-    FastLED.setBrightness(BRIGHTNESS);
+    setupLEDs();
 
     WiFi.setHostname(hostname);
     // Scan for known wifi Networks
@@ -179,6 +136,8 @@ void setup()
         while (true)
             ; // no need to go further, hang in there, will auto launch the Soft WDT reset
     }
+
+    // To reach here we must have a WiFI connection. Set the LEDs purple
     setLEDs(CRGB::Purple);
 
     // Initialize mDNS
@@ -201,8 +160,10 @@ void loop()
 {
     server.handleClient();
 
-    // Check for idle condition (no message received in the last 60 seconds)
+    // Check for idle condition (no message received in the last X seconds)
     if (millis() - lastMessageTime > IDLE_TIMEOUT) {
+
+        // Turn the LEDs off when the timeout is reached to save power
         setLEDs(CRGB::Black);  // Turn off LEDs
     }
 }
