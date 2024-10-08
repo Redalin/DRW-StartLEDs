@@ -4,9 +4,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// The device hostname
-const char* hostname = "drwleds";
-
 #endif
 
 #define DEBUG 0

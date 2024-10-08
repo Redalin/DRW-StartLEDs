@@ -1,10 +1,8 @@
-#include <WiFi.h>
-#include <ESPmDNS.h>
 #include "connect-wifi.h" // Wi-Fi credentials
 #include "ledControl.h"  // LED Control methods
 #include <WebServer.h>
 #include <ArduinoJson.h>
-#include "config.h" // Wi-Fi credentials
+#include "config.h"
 
 #define IDLE_TIMEOUT 30000  // 30 seconds idle time
 
@@ -127,36 +125,17 @@ void handleMessage()
 void setup()
 {
     Serial.begin(115200);
-    setupLEDs();
 
-    WiFi.setHostname(hostname);
-    // Scan for known wifi Networks
-    int networks = scanForWifi();
-    if (networks > 0)
-    {
-        String wifiName = connectToWifi();
-        String wifiMessage = "Connected to: " + wifiName;
-    }
-    else
-    {
-        Serial.println(F("no networks found. Reset to try again"));
-        while (true)
-            ; // no need to go further, hang in there, will auto launch the Soft WDT reset
-    }
+    // Initialise the LEDs in the ledControl file
+    initLEDs();
+
+    // initialise Wifi as per the connect-wifi file
+    initWifi();
 
     // To reach here we must have a WiFI connection. Set the LEDs purple
     setLEDs(CRGB::Purple);
 
-    // Initialize mDNS
-    if (!MDNS.begin(hostname))
-    { // Set the hostname
-        Serial.println("Error setting up MDNS responder!");
-        while (1)
-        {
-            delay(1000);
-        }
-    }
-    Serial.println("mDNS responder started");
+    initMDNS();
 
     server.on("/led", HTTP_POST, handleMessage);
     server.begin();

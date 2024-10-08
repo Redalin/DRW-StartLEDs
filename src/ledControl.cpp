@@ -3,15 +3,15 @@
 
 #define LED_PIN 16
 #define NUM_LEDS 30
-#define BRIGHTNESS 200
-#define WAVE_DURATION 10000 // wage checkered flag 10 seconds
+#define BRIGHTNESS 250
+#define WAVE_DURATION 5000 // wave checkered flag 10 seconds
 #define BLOCK_SIZE 5  // Define block size for black and white segments
 #define SWITCH_INTERVAL 500  // Interval in milliseconds for switching colors
 
 CRGB leds[NUM_LEDS];
 
 // Setup all the LEDs
-void setupLEDs () {
+void initLEDs () {
     FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
     FastLED.setBrightness(BRIGHTNESS);
 }

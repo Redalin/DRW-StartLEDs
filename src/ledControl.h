@@ -5,7 +5,7 @@
 // Removing the LED Control Part into another file
 #include <FastLED.h>
 
-void setupLEDs();
+void initLEDs();
 void setLEDs(CRGB colour);
 void waveChequeredFlag(CRGB colour);
 
