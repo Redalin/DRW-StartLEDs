@@ -27,34 +27,14 @@ void setLEDs(CRGB colour)
 }
 
 void waveChequeredFlag(CRGB colour) {
+    Serial.println("Waving the flag");
     // int wavePosition = 0;
     bool switchFlag = false;  // Variable to keep track of when to switch
 
     unsigned long startTime = millis(); // Get the starting time
 
-    while (millis() - startTime < WAVE_DURATION)
-        // {
-        //     // Loop through the LEDs and set the chequered pattern with wave effect
-        //     for (int i = 0; i < NUM_LEDS; i++)
-        //     {
-        //         // make a block of colour 'blockwidth' wide
-        //         if ((i + wavePosition) % blockWidth == 0) {
-        //             leds[i] = colour;
-        //         }
-        //         if (wavePosition % blockWidth == 0) {
-        //             // once the block is the right width, show the colour
-        //             FastLED.show();
-        //             delay(200);
-        //         }
-        //     }
+    while (millis() - startTime < WAVE_DURATION) {
 
-        //     // Increment wavePosition to shift the wave across the strip
-        //     wavePosition++;
-        //     if (wavePosition >= NUM_LEDS) {
-        //         wavePosition = 0;  // Reset wavePosition when it completes a full cycle
-        //     }
-        // }
-        // Set alternating blocks of 5 LEDs to black and white
         for (int i = 0; i < NUM_LEDS; i++) {
             // Alternate between black and white depending on the switchFlag state
             if (((i / BLOCK_SIZE) % 2 == 0 && !switchFlag) || ((i / BLOCK_SIZE) % 2 != 0 && switchFlag)) {
@@ -72,4 +52,5 @@ void waveChequeredFlag(CRGB colour) {
 
         // Toggle the switchFlag to alternate blocks
         switchFlag = !switchFlag;
+    }
 }

@@ -10,6 +10,7 @@
 
 WebServer server(80);
 
+
 unsigned long lastMessageTime = 0;
 
 // Handle the JSON message
@@ -32,15 +33,21 @@ void handleMessage()
     }
 
     // Display PilotName and LapNumber if available
-    if (doc.containsKey("PilotName") && doc.containsKey("LapNumber"))
+    if (doc.containsKey("PilotName") && doc.containsKey("LapNumber") && doc.containsKey("IsRaceEnd"))
     {
         const char *pilotName = doc["PilotName"];
         int lapNumber = doc["LapNumber"];
+        bool raceEnd = doc["IsRaceEnd"];
 
         Serial.print("PilotName: ");
         Serial.println(pilotName);
         Serial.print("LapNumber: ");
         Serial.println(lapNumber);
+
+        if (raceEnd) {
+            Serial.println("Pilot has finished -> Wave the checkered flag");
+            waveChequeredFlag(CRGB::White); // Use White as the highlight color
+        }
     }
     else
     {
@@ -71,8 +78,8 @@ void handleMessage()
         }
         else if (strcmp(state, "End") == 0)
         {
-            Serial.println("State: End -> Setting LEDs to Red");
-            setLEDs(CRGB(255, 0, 0)); // Red color
+            Serial.println("State: End -> Waving the checkered flag");
+            waveChequeredFlag(CRGB::White); // Use White as the highlight color
         }
         else if (strcmp(state, "Times Up") == 0)
         {
