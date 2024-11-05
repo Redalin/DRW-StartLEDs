@@ -12,8 +12,8 @@ const char *KNOWN_PASSWORD[] = {"wellington", "dummySSIDpass"};
 const int KNOWN_SSID_COUNT = sizeof(KNOWN_SSID) / sizeof(KNOWN_SSID[0]); // number of known networks
 
 // If we are hosting our own Wifi these are the credentials
-const char *AP_SSID = "DRW";
-const char *AP_PASSWORD = "wellington";
+// const char *AP_SSID = "DRW";
+// const char *AP_PASSWORD = "wellington";
 
 int visibleNetworks = 0;
 
@@ -104,17 +104,18 @@ String connectToWifi()
     Serial.println(WiFi.localIP());
     return KNOWN_SSID[n];
   }
-  else
-  {
+  // else
+  // {
     // We don't have WiFi, lets create our own
-    WiFi.softAP(AP_SSID, AP_PASSWORD);
+    // Actually don't do this. We don't want random AP's popping up in our Race area.
+    // WiFi.softAP(AP_SSID, AP_PASSWORD);
 
-    IPAddress IP = WiFi.softAPIP();
-    Serial.print("Creating local Wifi. IP address: ");
-    Serial.println(IP);
+    // IPAddress IP = WiFi.softAPIP();
+    // Serial.print("Creating local Wifi. IP address: ");
+    // Serial.println(IP);
 
-    // Print ESP32 Local IP Address
-    Serial.println(WiFi.localIP());
-    return AP_SSID;
-  }
+    // // Print ESP32 Local IP Address
+    // Serial.println(WiFi.localIP());
+    // return AP_SSID;
+  // }
 }

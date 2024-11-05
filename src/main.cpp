@@ -14,12 +14,20 @@ unsigned long lastMessageTime = 0;
 // Handle the JSON message
 void handleMessage()
 {
+
     // Buffer to store the incoming JSON
-    const size_t capacity = JSON_OBJECT_SIZE(11) + 300;
-    StaticJsonDocument<capacity> doc;
+    JsonDocument doc;
 
     String jsonMessage = server.arg("plain");                       // Get the incoming JSON message
     DeserializationError error = deserializeJson(doc, jsonMessage); // Parse the JSON
+
+    // Log the values (Optional)
+    Serial.println("Received JSON Data:");
+    Serial.println(jsonMessage);
+
+    bool raceEnd = false;
+    const char * pilotName = "";
+    int lapNumber = 0;
 
     if (error)
     {
@@ -30,33 +38,13 @@ void handleMessage()
         return;
     }
 
-    // Display PilotName and LapNumber if available
-    if (doc.containsKey("PilotName") && doc.containsKey("LapNumber") && doc.containsKey("IsRaceEnd"))
-    {
-        const char *pilotName = doc["PilotName"];
-        int lapNumber = doc["LapNumber"];
-        bool raceEnd = doc["IsRaceEnd"];
-
-        Serial.print("PilotName: ");
-        Serial.println(pilotName);
-        Serial.print("LapNumber: ");
-        Serial.println(lapNumber);
-
-        if (raceEnd) {
-            Serial.println("Pilot has finished -> Wave the checkered flag");
-            waveChequeredFlag(CRGB::White); // Use White as the highlight color
-        }
-    }
-    else
-    {
-        Serial.println("PilotName or LapNumber is missing.");
-    }
-
     // Check if the "State" field is present
-    if (doc.containsKey("State"))
+    if (doc["State"].is<const char *>())
     {
+        const char * state = doc["State"]; // Extract the "State" field
+        
+        // We have just received a valid message so reset the last message timer.
         lastMessageTime = millis();
-        const char *state = doc["State"]; // Extract the "State" field
 
         // Handle different states and set LED colors accordingly
         if (strcmp(state, "Arm") == 0)
@@ -72,7 +60,12 @@ void handleMessage()
         else if (strcmp(state, "Stop") == 0)
         {
             Serial.println("State: Stop -> Setting LEDs to Red");
-            setLEDs(CRGB(255, 0, 0)); // Red color
+            waveChequeredFlag(CRGB::Red); // Emergency Stop Flash Red
+        }
+        else if (strcmp(state, "Cancel") == 0)
+        {
+            Serial.println("State: Cancel -> Flashing LEDs to Red");
+            waveChequeredFlag(CRGB::Red); // Emergency Stop Flash Red
         }
         else if (strcmp(state, "End") == 0)
         {
@@ -81,45 +74,60 @@ void handleMessage()
         }
         else if (strcmp(state, "Times Up") == 0)
         {
-            Serial.println("State: Times Up -> Waving the checkered flag");
-            waveChequeredFlag(CRGB::White); // Use White as the highlight color
+            Serial.println("State: Times Up -> Finish your lap and land");
+            setLEDs(CRGB::Orange); // Set LEDs to orange light
         }
         else
         {
             Serial.println("Unknown State -> No LED action");
             server.send(400, "text/plain", "Unknown state value");
-            return;
         }
+        // Send a response
+        server.send(200, "text/plain", "LED Race state updated!");
+    }
+    else if (doc["PilotName"].is<const char *>() && doc["LapNumber"].is<int>() && doc["Position"].is<int>() && doc["IsRaceEnd"].is<bool>() && doc["ChannelColorR"].is<int>() && doc["ChannelColorG"].is<int>() && doc["ChannelColorB"].is<int>())
+    // No state, so we must have Pilot info. Therefore Display PilotName and LapNumber if available
+    {
+        // We have just received a valid message so reset the last message timer.
+        lastMessageTime = millis();
+
+        pilotName = doc["PilotName"];
+        lapNumber = doc["LapNumber"];
+        raceEnd = doc["IsRaceEnd"];
+        int position = doc["Position"];
+
+        Serial.print("PilotName: ");
+        Serial.println(pilotName);
+        Serial.print("LapNumber: ");
+        Serial.println(lapNumber);
+
+        int r = doc["ChannelColorR"];
+        int g = doc["ChannelColorG"];
+        int b = doc["ChannelColorB"];
+
+        Serial.print("Received LED RGB values -> R: ");
+        Serial.print(r);
+        Serial.print(", G: ");
+        Serial.print(g);
+        Serial.print(", B: ");
+        Serial.println(b);
+
+        if (raceEnd && (position == 1)) {
+            Serial.println("Pilot has finished first -> Wave the checkered flag");
+            waveChequeredFlag(CRGB(r, g, b)); // Use Pilot colour as the highlight color
+        } else {
+
+            setLEDs(CRGB(r, g, b)); // Set the LEDs to the specified Pilot RGB values
+        }
+        // Send a response
+        server.send(200, "text/plain", "LED Colour state updated!");
     }
     else
     {
-        // If "State" is not present, fall back to using RGB values from the JSON
-        if (doc.containsKey("ChannelColorR") && doc.containsKey("ChannelColorG") && doc.containsKey("ChannelColorB"))
-        {
-            lastMessageTime = millis();
-            int r = doc["ChannelColorR"];
-            int g = doc["ChannelColorG"];
-            int b = doc["ChannelColorB"];
-
-            Serial.print("Setting LEDs to RGB values -> R: ");
-            Serial.print(r);
-            Serial.print(", G: ");
-            Serial.print(g);
-            Serial.print(", B: ");
-            Serial.println(b);
-
-            setLEDs(CRGB(r, g, b)); // Set the LEDs to the specified RGB values
-        }
-        else
-        {
-            Serial.println("No valid color information found in JSON");
-            server.send(400, "text/plain", "No valid state or color information");
-            return;
-        }
+        Serial.println("PilotName or LapNumber or colour information is missing.");
+        server.send(400, "text/plain", "No valid race state or color information");  
+        return;
     }
-
-    // Send a response
-    server.send(200, "text/plain", "LED state updated!");
 }
 
 void setup()
